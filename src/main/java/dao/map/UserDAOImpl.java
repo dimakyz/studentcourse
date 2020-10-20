@@ -2,10 +2,13 @@ package dao.map;
 
 import dao.UserDao;
 import model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.UUID;
 
+@Repository
+//@Profile("map")
 public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
 
     public UserDAOImpl() {

@@ -2,12 +2,13 @@ package dao.map;
 
 import dao.CourseDao;
 import model.Course;
-import org.springframework.stereotype.Repository;
 import model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 
 @Repository
+//@Profile("map")
 public class CourseDAOImpl extends AbstractDao<Course, Long> implements CourseDao {
 
     public CourseDAOImpl() {

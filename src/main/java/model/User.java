@@ -6,6 +6,7 @@ public class User implements Identified<UUID>{
     private static final long serialVersionUID = -7931737332645464539L;
 
     private UUID id;
+    private int age;
     private UserStatus userStatus;
     private String username;
     private String password;
@@ -22,9 +23,7 @@ public class User implements Identified<UUID>{
         this.id = id;
     }
 
-    public UserStatus getUserStatus() {
-        return userStatus;
-    }
+    public UserStatus getUserStatus() {return userStatus;}
 
     public void setUserStatus(UserStatus userStatus) {
         this.userStatus = userStatus;
@@ -53,5 +52,9 @@ public class User implements Identified<UUID>{
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public int getAge() { return age; }
+
+    public void setAge(int age) { this.age = age; }
 
 }
