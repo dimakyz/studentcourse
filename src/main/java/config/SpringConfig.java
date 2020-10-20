@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan("service")
-@ComponentScan("model")
+@ComponentScan("config")
 @ComponentScan("dao")
 public class SpringConfig {
 }
