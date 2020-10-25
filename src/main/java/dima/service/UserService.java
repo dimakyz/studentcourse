@@ -1,6 +1,6 @@
-package service;
+package dima.service;
 
-import model.User;
+import dima.model.User;
 
 import java.time.LocalDateTime;
 

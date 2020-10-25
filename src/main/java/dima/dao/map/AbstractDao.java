@@ -1,7 +1,7 @@
-package dao.map;
+package dima.dao.map;
 
-import dao.GenericDAO;
-import model.Identified;
+import dima.dao.GenericDAO;
+import dima.model.Identified;
 
 import java.io.Serializable;
 import java.util.Collection;

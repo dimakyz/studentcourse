@@ -1,4 +1,4 @@
-package model;
+package dima.model;
 
 public enum UserStatus {
 

@@ -1,6 +1,6 @@
-package service;
+package dima.service;
 
-import model.Course;
+import dima.model.Course;
 
 public interface CourseService {
 

@@ -1,4 +1,4 @@
-package model;
+package dima.model;
 
 import java.util.UUID;
 
@@ -12,7 +12,7 @@ public class User implements Identified<UUID>{
     private String password;
     private String email;
 
-    public User() {}
+    public User(UUID uuid, String username, String password, String email) {}
 
     @Override
     public UUID getId() {

@@ -1,7 +1,7 @@
-package service;
+package dima.service;
 
-import dao.UserDao;
-import model.User;
+import dima.dao.UserDao;
+import dima.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -52,9 +52,4 @@ public class UserServiceImpl implements UserService {
         }
     }
 
-//    @Autowired
-//    @Lazy
-//    public void setSelf(UserService self) {
-//        this.self = self;
-//    }
 }

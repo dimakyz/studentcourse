@@ -1,8 +1,8 @@
-package dao.map;
+package dima.dao.map;
 
-import dao.CourseDao;
-import model.Course;
-import model.User;
+import dima.dao.CourseDao;
+import dima.model.Course;
+import dima.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

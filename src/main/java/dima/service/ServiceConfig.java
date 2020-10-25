@@ -1,7 +1,7 @@
-package service;
+package dima.service;
 
-import dao.CourseDao;
-import dao.UserDao;
+import dima.dao.CourseDao;
+import dima.dao.UserDao;
 import org.springframework.context.annotation.Bean;
 
 public class ServiceConfig {

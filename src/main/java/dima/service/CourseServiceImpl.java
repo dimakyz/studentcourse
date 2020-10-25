@@ -1,10 +1,10 @@
-package service;
+package dima.service;
 
-import dao.CourseDao;
+import dima.dao.CourseDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import model.Course;
+import dima.model.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;

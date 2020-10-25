@@ -1,7 +1,7 @@
-package dao.map;
+/*package dima.dao.map;
 
-import dao.CourseDao;
-import dao.UserDao;
+import dima.dao.CourseDao;
+import dima.dao.UserDao;
 import org.springframework.context.annotation.Bean;
 
 public class RepositoryConfig {
@@ -15,4 +15,4 @@ public class RepositoryConfig {
         return new CourseDAOImpl();
     }
 
-}
+}*/

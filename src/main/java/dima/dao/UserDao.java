@@ -1,6 +1,6 @@
-package dao;
+package dima.dao;
 
-import model.User;
+import dima.model.User;
 
 import java.util.UUID;
 

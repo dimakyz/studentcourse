@@ -1,7 +1,7 @@
-package dao;
+package dima.dao;
 
-import model.Course;
-import model.User;
+import dima.model.Course;
+import dima.model.User;
 
 public interface CourseDao extends GenericDAO<Course, Long> {
 

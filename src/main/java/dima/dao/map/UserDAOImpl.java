@@ -1,7 +1,7 @@
-package dao.map;
+package dima.dao.map;
 
-import dao.UserDao;
-import model.User;
+import dima.dao.UserDao;
+import dima.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
