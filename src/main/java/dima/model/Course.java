@@ -1,9 +1,10 @@
-package model;
+package dima.model;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+//Параметры курса
 public class Course implements Identified<Long> {
 
     private static final long serialVersionUID = -9005741475704378708L;

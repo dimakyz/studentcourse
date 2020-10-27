@@ -1,10 +1,10 @@
-package service;
+package dima.service;
 
-import config.SpringConfig;
-import model.Course;
-import model.CourseStatus;
-import model.User;
-import model.UserStatus;
+import dima.config.SpringConfig;
+import dima.model.Course;
+import dima.model.CourseStatus;
+import dima.model.User;
+import dima.model.UserStatus;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;

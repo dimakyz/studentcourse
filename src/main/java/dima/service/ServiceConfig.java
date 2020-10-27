@@ -1,9 +1,11 @@
-package service;
+package dima.service;
 
-import dao.CourseDao;
-import dao.UserDao;
+import dima.dao.CourseDao;
+import dima.dao.UserDao;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServiceConfig {
 
     @Bean
@@ -12,7 +14,7 @@ public class ServiceConfig {
     }
 
     @Bean
-    public CourseService courseServiceImpl(CourseDao courseDAO) {
+    public CourseServiceImpl courseServiceImpl(CourseDao courseDAO) {
         return new CourseServiceImpl();
     }
 }

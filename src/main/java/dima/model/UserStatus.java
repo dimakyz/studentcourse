@@ -1,5 +1,6 @@
-package model;
+package dima.model;
 
+//Статус студента
 public enum UserStatus {
 
     STATUS_CREATED("Зачислен"),

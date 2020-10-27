@@ -1,6 +1,6 @@
-package dao;
+package dima.dao;
 
-import model.Identified;
+import dima.model.Identified;
 
 import java.io.Serializable;
 import java.util.Collection;

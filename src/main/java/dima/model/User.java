@@ -1,7 +1,8 @@
-package model;
+package dima.model;
 
 import java.util.UUID;
 
+//Параметры студента
 public class User implements Identified<UUID>{
     private static final long serialVersionUID = -7931737332645464539L;
 
