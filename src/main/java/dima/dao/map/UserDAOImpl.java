@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.UUID;
 
 @Repository
-//@Profile("map")
 public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
 
     public UserDAOImpl() {
         super(User.class, new HashMap<>());
     }
 
+    //Проверка на Имя
     @Override
     public boolean userNameExist(String username) {
         for (User el : elements.values()) {
@@ -25,6 +25,7 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
         return false;
     }
 
+    //Проверка на существование Email
     @Override
     public boolean emailExist(String email) {
         for (User el : elements.values()) {
@@ -35,8 +36,9 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
         return false;
     }
 
+    //Получение студента по имени
     @Override
-    public User findUserByLoginOrEmail(String username) {
+    public User findUserByUsername(String username) {
         for (User el : elements.values()) {
             if (el.getUsername().equals(username) || el.getUsername().equals(username)) {
                 return el;
@@ -45,10 +47,11 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
         return null;
     }
 
+    //Получение студента по имейл
     @Override
-    public User findUserByLogin(String name) {
+    public User findUserByEmail(String email) {
         for (User el : elements.values()) {
-            if (el.getUsername().equals(name)) {
+            if (el.getEmail().equals(email)) {
                 return el;
             }
         }

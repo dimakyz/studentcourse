@@ -1,5 +1,6 @@
 package dima.model;
 
+//Статус курса
 public enum CourseStatus {
 
     STATUS_CREATED("Создан"),

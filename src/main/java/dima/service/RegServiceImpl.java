@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+//Сервис для регистрации студента
 @Service
 public class RegServiceImpl implements RegistrationService {
     private static final Logger logger = LogManager.getLogger(RegServiceImpl.class.getName());

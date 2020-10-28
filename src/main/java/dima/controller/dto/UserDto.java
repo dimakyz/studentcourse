@@ -5,6 +5,7 @@ import org.springframework.validation.ObjectError;
 import java.util.List;
 import java.util.UUID;
 
+//Данные пользователя при регистрации
 public class UserDto {
 
     public UserDto() {

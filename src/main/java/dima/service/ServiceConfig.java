@@ -3,7 +3,9 @@ package dima.service;
 import dima.dao.CourseDao;
 import dima.dao.UserDao;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ServiceConfig {
 
     @Bean

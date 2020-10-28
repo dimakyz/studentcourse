@@ -4,17 +4,13 @@ import dima.dao.UserDao;
 import dima.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
 
 @Service
-@Scope("prototype")
 @PropertySource(value = {"classpath:application.properties"})
 public class UserServiceImpl implements UserService {
     private static final Logger log = LogManager.getLogger(UserServiceImpl.class.getName());
@@ -24,16 +20,11 @@ public class UserServiceImpl implements UserService {
 
     private UserDao userDAO;
     private LocalDateTime currentTime;
-    private UserService self;
 
-    public UserServiceImpl(@Qualifier("userDAOImpl") UserDao userDAO) {
+
+    public UserServiceImpl(UserDao userDAO) {
         log.info("createService");
         this.userDAO = userDAO;
-    }
-
-    @PostConstruct
-    public void postConstruct() {
-        log.info("postConstruct");
     }
 
     @Override
@@ -41,6 +32,7 @@ public class UserServiceImpl implements UserService {
         currentTime = now;
     }
 
+    //Добавление студента
     @Override
     public void addStudent(User user) {
         if (user.getAge() < minAge) {
@@ -51,5 +43,4 @@ public class UserServiceImpl implements UserService {
             log.info("Added student: " + user.getUsername() + " currentTime: " + LocalDateTime.now() + " UserService: " + this.toString());
         }
     }
-
 }

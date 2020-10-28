@@ -6,11 +6,15 @@ import java.util.UUID;
 
 public interface UserDao extends GenericDAO<User, UUID> {
 
+    //Проверка на существование студента по имени
     boolean userNameExist(String username);
 
+    //Проверка на существование Email
     boolean emailExist(String email);
 
-    User findUserByLoginOrEmail(String username);
+    //Получение студента по имени
+    User findUserByUsername(String username);
 
-    User findUserByLogin(String name);
+    //Получение студента по имейл
+    User findUserByEmail(String name);
 }

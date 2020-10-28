@@ -18,11 +18,4 @@
 
     <mvc:resources mapping="/resources/**" location="/"/>
 
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <bean class="dima.interceptor.UserInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
 </beans>

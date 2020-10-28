@@ -3,15 +3,13 @@ package dima.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
-import java.util.List;
 
 @RestController
 public class FirstController {
 
-        @RequestMapping("/api/first")
-        public List<String> sayHello() {
-            return Arrays.asList("ля-ля", "та-та", "гага");
+        @RequestMapping(value = "/api/first")
+        public String sayHello() {
+            return "HelloWorld";
         }
 
 }

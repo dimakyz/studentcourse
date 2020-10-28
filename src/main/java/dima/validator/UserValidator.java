@@ -9,6 +9,7 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 import java.util.Locale;
 
+//Валидатор для регистрации
 @Component
 public class UserValidator implements Validator {
     private MessageSource messageSource;

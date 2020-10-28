@@ -26,7 +26,6 @@ public class RegistrationController {
         this.userValidator = userValidator;
     }
 
-    //    @PostMapping
     @RequestMapping(method = RequestMethod.POST)
     public UserDto userRegistration(@Validated @RequestBody UserDto userDto, BindingResult result) {
 

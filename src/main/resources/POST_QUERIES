@@ -1,0 +1,11 @@
+/*
+*   POST запрос по адресу localhost:8080/registration
+*/
+
+
+{
+    "username": "qwe",
+    "password" : "asd",
+    "email" : "123",
+    "repeatPassword":"asd"
+}
