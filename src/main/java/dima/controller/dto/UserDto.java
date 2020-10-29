@@ -12,6 +12,7 @@ public class UserDto {
     }
 
     private UUID id;
+    private int age;
     private String username;
     private String password;
     private String repeatPassword;
@@ -24,6 +25,14 @@ public class UserDto {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getUsername() {
@@ -65,6 +74,4 @@ public class UserDto {
     public void setErrors(List<ObjectError> errors) {
         this.errors = errors;
     }
-
-
 }

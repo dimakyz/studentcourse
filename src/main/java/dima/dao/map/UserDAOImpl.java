@@ -38,9 +38,9 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
 
     //Получение студента по имени
     @Override
-    public User findUserByUsername(String username) {
+    public User findStudentByName(String username) {
         for (User el : elements.values()) {
-            if (el.getUsername().equals(username) || el.getUsername().equals(username)) {
+            if (el.getUsername().equals(username)) {
                 return el;
             }
         }
@@ -49,7 +49,7 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
 
     //Получение студента по имейл
     @Override
-    public User findUserByEmail(String email) {
+    public User findStudentByEmail(String email) {
         for (User el : elements.values()) {
             if (el.getEmail().equals(email)) {
                 return el;

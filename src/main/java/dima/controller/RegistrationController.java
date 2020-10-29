@@ -26,6 +26,7 @@ public class RegistrationController {
         this.userValidator = userValidator;
     }
 
+    //Post запрос Регистрация пользователя и получение списка всех зарегистрированных пользователей
     @RequestMapping(method = RequestMethod.POST)
     public UserDto userRegistration(@Validated @RequestBody UserDto userDto, BindingResult result) {
 
@@ -34,7 +35,7 @@ public class RegistrationController {
             return userDto;
         }
 
-        registrationService.regUser(userDto);
+        registrationService.regStudent(userDto);
         return userDto;
     }
 

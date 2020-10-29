@@ -7,6 +7,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 //Сервис для регистрации студента
@@ -19,11 +21,31 @@ public class RegServiceImpl implements RegistrationService {
         this.userDao = userDao;
     }
 
+    public static Set<User> users = new HashSet<>();
+
     @Override
-    public UserDto regUser(UserDto userDto) {
-        User user = new User(UUID.randomUUID(), userDto.getUsername(), userDto.getPassword(), userDto.getEmail());
+    public Set<User> regStudent(UserDto userDto) {
+        User user = new User(UUID.randomUUID(), userDto.getAge(), userDto.getUsername(), userDto.getPassword(), userDto.getEmail());
         userDao.save(user);
         userDto.setId(user.getId());
-        return userDto;
+        users.add(user);
+        return users;
+    }
+    @Override
+    public Set<User> updateStudent(String userName) {
+        User user = userDao.findStudentByName(userName);
+        user.setEmail("new@email.ru");
+        return users;
+    }
+    @Override
+    public User getStudent(String userName) {
+        User user = userDao.findStudentByName(userName);
+        return user;
+    }
+    @Override
+    public Set<User> deleteStudent(String userName) {
+        User user = userDao.findStudentByName(userName);
+        users.remove(user);
+        return users;
     }
 }

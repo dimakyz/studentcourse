@@ -13,7 +13,13 @@ public class User implements Identified<UUID>{
     private String password;
     private String email;
 
-    public User(UUID uuid, String username, String password, String email) {}
+    public User(UUID uuid, int age, String username, String password, String email) {
+        this.id = uuid;
+        this.age = age;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     @Override
     public UUID getId() {
@@ -58,4 +64,15 @@ public class User implements Identified<UUID>{
 
     public void setAge(int age) { this.age = age; }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", age=" + age +
+                ", userStatus=" + userStatus +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

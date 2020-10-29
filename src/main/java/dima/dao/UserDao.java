@@ -13,8 +13,9 @@ public interface UserDao extends GenericDAO<User, UUID> {
     boolean emailExist(String email);
 
     //Получение студента по имени
-    User findUserByUsername(String username);
+    User findStudentByName(String username);
 
     //Получение студента по имейл
-    User findUserByEmail(String name);
+    User findStudentByEmail(String name);
+
 }
