@@ -27,15 +27,13 @@ public class FirstController {
     }
 
     //Get запрос Получение студента по имени
-    @PostMapping
-    @RequestMapping(value = "/find")
+    @PostMapping(value = "/find")
     public User getStudentByName(@RequestBody String userName) {
         return registrationService.getStudent(userName);
     }
 
     //Put запрос Обновление email у пользователя по имени и получение списка всех зарегистрированных пользователей
-    @PutMapping
-    @RequestMapping(value = "/update")
+    @PutMapping(value = "/update")
     public Set<User> updateStudentEmail(@RequestBody String userName) {
         registrationService.updateStudent(userName);
         return users;

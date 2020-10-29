@@ -1,0 +1,49 @@
+/*
+*   POST запрос по адресу localhost:8080/registration
+*   По-очередно отправить json-ы
+*/
+
+{
+    "username": "qwe",
+    "age" : 18,
+    "password" : "asd",
+    "email" : "123",
+    "repeatPassword":"asd"
+}
+{
+    "email" : "123",
+    "age" : 18,
+    "username": "qwe1",
+    "password" : "asd",
+    "repeatPassword":"asd"
+}
+{
+    "email" : "123",
+    "age" : 18,
+    "username": "qwe2",
+    "password" : "asd",
+    "repeatPassword":"asd"
+}
+
+/*
+*   GET запрос без параметров по адресу localhost:8080/api/first
+*   Список всех зарегистрированных
+*/
+
+/*
+*   POST запрос с именем пользователя по адресу localhost:8080/api/find
+*   Получение пользователя по имени
+*/
+qwe
+
+/*
+*   PUT запрос с именем пользователя по адресу localhost:8080/api/update
+*   Обновление email пользователя по имени
+*/
+qwe
+
+/*
+*   POST запрос с именем пользователя по адресу localhost:8080/api/delete
+*   Удаление пользователя по имени
+*/
+qwe
