@@ -10,7 +10,7 @@ import java.util.Set;
 import static dima.service.RegServiceImpl.users;
 
 @RestController
-@RequestMapping(value = "/api")
+@RequestMapping("/api")
 public class FirstController {
 
     private RegistrationService registrationService;
@@ -21,19 +21,19 @@ public class FirstController {
     }
 
     //Get запрос Получение списка всех зарегистрированных пользователей
-    @RequestMapping(value = "/first")
+    @RequestMapping("/first")
     public Set<User> sayHello() {
         return users;
     }
 
     //Get запрос Получение студента по имени
-    @PostMapping(value = "/find")
+    @PostMapping("/find")
     public User getStudentByName(@RequestBody String userName) {
         return registrationService.getStudent(userName);
     }
 
     //Put запрос Обновление email у пользователя по имени и получение списка всех зарегистрированных пользователей
-    @PutMapping(value = "/update")
+    @PutMapping("/update")
     public Set<User> updateStudentEmail(@RequestBody String userName) {
         registrationService.updateStudent(userName);
         return users;
