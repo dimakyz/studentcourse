@@ -7,7 +7,9 @@ import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
+
 import java.util.Locale;
+import java.util.NoSuchElementException;
 
 //Валидатор для регистрации
 @Component
@@ -31,6 +33,15 @@ public class UserValidator implements Validator {
             logger.error("username is empty");
             String message = messageSource.getMessage("username.empty", new Object[]{}, Locale.getDefault());
             errors.rejectValue("username", "username.empty", message);
+            throw new NoSuchElementException("usernameException");
+        }
+
+        if (errors.hasErrors()) return;
+
+        if (userForm.getPassword().length() < 4) {
+            logger.error("Weak Password. Need more than 4 simbols");
+            errors.rejectValue("password", "password.low", "Weak Password");
+            throw new IllegalArgumentException("illegalArgumentException");
         }
 
         if (errors.hasErrors()) return;

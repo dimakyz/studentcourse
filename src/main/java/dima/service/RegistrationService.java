@@ -18,4 +18,6 @@ public interface RegistrationService {
 
     //Удаление пользователя по имени
     Set<User> deleteStudent(String userName);
+
+    void postOperation(User user);
 }
