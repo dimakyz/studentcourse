@@ -45,13 +45,13 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(error, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<ResponseError> usernameException(Exception exception) {
+    @ExceptionHandler(ArithmeticException.class)
+    public ResponseEntity<ResponseError> usernameException(ArithmeticException exception) {
         log.debug(exception.getLocalizedMessage(), exception);
         ResponseError error = new ResponseError(
                 UUID.randomUUID(),
                 "userName",
-                "Пустое имя пользователя",
+                "Field username is empty",
                 "mySystem"
         );
         return new ResponseEntity<>(error, new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);

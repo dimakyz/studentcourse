@@ -8,9 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import java.util.Locale;
-import java.util.NoSuchElementException;
-
 //Валидатор для регистрации
 @Component
 public class UserValidator implements Validator {
@@ -31,9 +28,8 @@ public class UserValidator implements Validator {
         UserDto userForm = (UserDto) target;
         if (userForm.getUsername().isEmpty()) {
             logger.error("username is empty");
-            String message = messageSource.getMessage("username.empty", new Object[]{}, Locale.getDefault());
-            errors.rejectValue("username", "username.empty", message);
-            throw new NoSuchElementException("usernameException");
+            errors.rejectValue("username", "username.empty", "Error: username is empty");
+            throw new ArithmeticException("usernameException");
         }
 
         if (errors.hasErrors()) return;

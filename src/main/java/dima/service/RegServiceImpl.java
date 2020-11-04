@@ -58,7 +58,7 @@ public class RegServiceImpl implements RegistrationService {
     public void postOperation(User user) {
         LockSupport.parkNanos(5_000_000_000L);
         logger.info("post operation for " + user.getId());
-        throw new RuntimeException("passwordException");
+        throw new RuntimeException("runtimeException");
     }
 
 }
