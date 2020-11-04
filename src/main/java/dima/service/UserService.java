@@ -4,7 +4,9 @@ import dima.model.User;
 
 import java.time.LocalDateTime;
 
-
+/**
+ * Сервис добавление Студента
+ */
 public interface UserService {
 
     //Добавление студента

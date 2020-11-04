@@ -7,14 +7,19 @@ import java.util.Set;
 //Параметры курса
 public class Course implements Identified<Long> {
 
-    private static final long serialVersionUID = -9005741475704378708L;
-
+    //Уникальный Id Куоса
     private Long id;
+    //Дата создания курса
     private LocalDateTime createdAt;
+    //Дата обновления курса
     private LocalDateTime updatedAt;
+    //Дата завершения курса
     private LocalDateTime endTime;
+    //Статус курса
     private CourseStatus courseStatus;
+    //Название курса
     private String courseName;
+    //Список студентов на курсе
     private Set<User> users;
 
     public Course() {

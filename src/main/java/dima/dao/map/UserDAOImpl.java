@@ -14,7 +14,7 @@ public class UserDAOImpl extends AbstractDao<User, UUID> implements UserDao {
         super(User.class, new HashMap<>());
     }
 
-    //Проверка на Имя
+    //Проверка на имя
     @Override
     public boolean userNameExist(String username) {
         for (User el : elements.values()) {
